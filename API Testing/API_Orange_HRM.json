@@ -518,6 +518,7 @@
                   "    pm.expect(jsonData.success).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.success).to.eql(\"Successfully Saved\");\r",
                   "    pm.expect(jsonData.id).to.be.a(\"string\");\r",
+                  "    pm.expect(jsonData.id).to.eql(pm.environment.get(\"newEmployeeId\"));\r",
                   "});\r",
                   "\r",
                   "pm.test(\"Response time is less than 1000ms\", function () {\r",
