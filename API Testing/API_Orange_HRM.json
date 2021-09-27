@@ -1386,7 +1386,7 @@
                   "    pm.expect(jsonData.data.workEmail).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.workEmail).to.eql(\"ab3cd3@gmail.com\");\r",
                   "    pm.expect(jsonData.data.otherEmail).to.be.a(\"string\");\r",
-                  "    pm.expect(jsonData.data.otherEmail).to.eql(\"abtc72d1e@gmail.com\");\r",
+                  "    pm.expect(jsonData.data.otherEmail).to.be.a(\"abtc72d1e@gmail.com\");\r",
                   "});\r",
                   "\r",
                   "pm.test(\"Response time is less than 1000ms\", function () {\r",
