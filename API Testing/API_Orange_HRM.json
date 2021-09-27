@@ -992,6 +992,7 @@
                   "pm.test(\"Verify result data Employee Dependent\", function () {\r",
                   "    var jsonData = pm.response.json();\r",
                   "    pm.expect(jsonData.data[0].name).to.be.a(\"string\");\r",
+                  "    pm.expect(jsonData.data[0].name).to.eql(\"Christin Dengen\");\r",
                   "    pm.expect(jsonData.data[0].relationship).to.eql(\"Child\");\r",
                   "    pm.expect(jsonData.data[0].dob).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data[0].sequenceNumber).to.be.a(\"string\");\r",
