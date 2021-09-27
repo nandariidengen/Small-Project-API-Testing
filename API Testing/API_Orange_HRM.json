@@ -1376,6 +1376,7 @@
                   "    pm.expect(jsonData.data.zip).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.zip).to.eql(\"75117\");\r",
                   "    pm.expect(jsonData.data.county).to.be.a(\"string\");\r",
+                  "    pm.expect(jsonData.data.county).to.eql(\"INDONESIA\");\r",
                   "    pm.expect(jsonData.data.homeTelephone).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.workTelephone).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.mobile).to.be.a(\"string\");\r",
