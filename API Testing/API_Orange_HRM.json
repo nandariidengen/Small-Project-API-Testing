@@ -812,6 +812,8 @@
                   "    pm.expect(jsonData.data.lastName).to.eql(pm.environment.get(\"lastName\"));\r",
                   "    pm.expect(jsonData.data.code).to.eql(pm.variables.get(\"randomNumber\").toString());\r",
                   "    pm.expect(jsonData.data.employeeId).to.eql(pm.environment.get(\"newEmployeeId\"));\r",
+                  "    pm.expect(jsonData.data.fullName).to.eql(pm.environment.get(\"employeeName\"));\r",
+                  "    pm.expect(jsonData.data.status).to.be.null;\r",
                   "    pm.expect(jsonData.data.dob).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.dob).to.eql(pm.environment.get(\"dob\"));\r",
                   "    pm.expect(jsonData.data.driversLicenseNumber).to.be.a(\"string\");\r",
