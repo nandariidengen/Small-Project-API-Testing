@@ -735,7 +735,7 @@
                   "pm.environment.set(\"lastName\", \"Testing\");\r",
                   "pm.environment.set(\"dob\", \"1999-02-13\");\r",
                   "pm.environment.set(\"licenseNumber\", \"0204456543\");\r",
-                  "pm.environment.set(\"licenseNumberExpDate\", \"2025-07-13\");\r",
+                  "pm.environment.set(\"licenseNumberExpDate\", pm.variables.replaceIn('{{$randomDateFuture}}'));\r",
                   "pm.environment.set(\"maritalStatus\", \"Single\");\r",
                   "pm.environment.set(\"gender\", \"F\");\r",
                   "pm.environment.set(\"otherId\", \"005\");\r",
