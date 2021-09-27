@@ -894,6 +894,95 @@
           "response": []
         },
         {
+          "name": "Employee Search",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "74684b3a-4df2-44ad-937d-b73610ce2c5c",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Verify Result Employee Search\", function () {\r",
+                  "    var jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData.data[0].firstName).to.eql(pm.environment.get(\"randomFirstName\"));\r",
+                  "    pm.expect(jsonData.data[0].middleName).to.eql(pm.environment.get(\"randomMiddleName\"));\r",
+                  "    pm.expect(jsonData.data[0].lastName).to.eql(pm.environment.get(\"lastName\"));\r",
+                  "    pm.expect(jsonData.data[0].code).to.eql(pm.variables.get(\"randomNumber\").toString());\r",
+                  "    pm.expect(jsonData.data[0].employeeId).to.eql(pm.environment.get(\"newEmployeeId\"));\r",
+                  "    pm.expect(jsonData.data[0].fullName).to.eql(pm.environment.get(\"employeeName\"));\r",
+                  "    pm.expect(jsonData.data[0].dob).to.eql(pm.environment.get(\"dob\"));\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+                  "});\r",
+                  "\r",
+                  "\r",
+                  "\r",
+                  "   \r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "af76d1db-ce5f-4179-b920-3d7976a309c2",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "5fc65e11-99b8-4825-8cbe-fce724424f87",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{Token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/employee/search?name={{employeeName}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "employee",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "{{employeeName}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "name": "Save Employee Dependents",
           "event": [
             {
@@ -1620,95 +1709,6 @@
                 {
                   "key": "id",
                   "value": "{{newEmployeeId}}"
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Employee Search",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "74684b3a-4df2-44ad-937d-b73610ce2c5c",
-                "exec": [
-                  "pm.test(\"Status code is 200\", function () {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Verify Result Employee Search\", function () {\r",
-                  "    var jsonData = pm.response.json();\r",
-                  "    pm.expect(jsonData.data[0].firstName).to.eql(pm.environment.get(\"randomFirstName\"));\r",
-                  "    pm.expect(jsonData.data[0].middleName).to.eql(pm.environment.get(\"randomMiddleName\"));\r",
-                  "    pm.expect(jsonData.data[0].lastName).to.eql(pm.environment.get(\"lastName\"));\r",
-                  "    pm.expect(jsonData.data[0].code).to.eql(pm.variables.get(\"randomNumber\").toString());\r",
-                  "    pm.expect(jsonData.data[0].employeeId).to.eql(pm.environment.get(\"newEmployeeId\"));\r",
-                  "    pm.expect(jsonData.data[0].fullName).to.eql(pm.environment.get(\"employeeName\"));\r",
-                  "    pm.expect(jsonData.data[0].dob).to.eql(pm.environment.get(\"dob\"));\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", function () {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
-                  "});\r",
-                  "\r",
-                  "\r",
-                  "\r",
-                  "   \r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "af76d1db-ce5f-4179-b920-3d7976a309c2",
-                "exec": [
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "5fc65e11-99b8-4825-8cbe-fce724424f87",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{Token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{baseUrl}}/api/v1/employee/search?name={{employeeName}}",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "employee",
-                "search"
-              ],
-              "query": [
-                {
-                  "key": "name",
-                  "value": "{{employeeName}}"
                 }
               ]
             }
