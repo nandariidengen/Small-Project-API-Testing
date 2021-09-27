@@ -1480,7 +1480,7 @@
                   "pm.environment.set(\"workTelephone\", pm.variables.replaceIn('{{$randomPhoneNumberExt}}'));\r",
                   "pm.environment.set(\"mobile\", \"08283934341\");\r",
                   "pm.environment.set(\"workEmail\", pm.variables.replaceIn('{{$randomEmail}}'));\r",
-                  "pm.environment.set(\"otherEmail\", \"miesedap@gmail.com\");"
+                  "pm.environment.set(\"otherEmail\", pm.variables.replaceIn('{{$randomExampleEmail}}'));"
                 ],
                 "type": "text/javascript"
               }
