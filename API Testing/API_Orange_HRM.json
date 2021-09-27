@@ -1075,7 +1075,7 @@
               "script": {
                 "id": "1f65db0f-a00b-46f3-9d1a-c62fca715b53",
                 "exec": [
-                  "pm.environment.set(\"name\", \"Nandari\");\r",
+                  "pm.environment.set(\"name\", pm.variables.replaceIn('{{$randomFullName}}'));\r",
                   "pm.environment.set(\"relationship\", \"Child\");\r",
                   "pm.environment.set(\"dob\", \"1995-11-03\");"
                 ],
