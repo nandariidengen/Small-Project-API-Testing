@@ -1472,8 +1472,7 @@
                 "exec": [
                   "pm.environment.set(\"addressStreet1\", \"Jl. Rusa\");\r",
                   "pm.environment.set(\"addressStreet2\", \"NTI\");\r",
-                  "// pm.environment.set(\"city\", \"Mks\");\r",
-                  "pm.environment.set(\"randomCity\", pm.variables.replaceIn('{{$randomCity}}'));\r",
+                  "pm.environment.set(\"city\", \"Mks\");\r",
                   "pm.environment.set(\"state\", \"IDN\");\r",
                   "pm.environment.set(\"zip\", \"75113\");\r",
                   "pm.environment.set(\"country\", \"INDONESIA\");\r",
@@ -1554,7 +1553,7 @@
                   "    pm.expect(jsonData.data.addressStreet2).to.eql(pm.environment.get(\"addressStreet2\"));\r",
                   "pm.environment.get(\"variable_key\");\r",
                   "    pm.expect(jsonData.data.city).to.be.a(\"string\");\r",
-                  "    pm.expect(jsonData.data.city).to.eql(pm.environment.get(\"randomCity\"));\r",
+                  "    pm.expect(jsonData.data.city).to.eql(pm.environment.get(\"city\"));\r",
                   "    pm.expect(jsonData.data.state).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.state).to.eql(pm.environment.get(\"state\"));\r",
                   "    pm.expect(jsonData.data.zip).to.be.a(\"string\");\r",
