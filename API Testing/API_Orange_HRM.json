@@ -1378,8 +1378,8 @@
                   "    pm.expect(jsonData.data.otherEmail).to.be.a(\"string\");\r",
                   "});\r",
                   "\r",
-                  "pm.test(\"Response time is less than 200ms\", function () {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+                  "pm.test(\"Response time is less than 1000ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
                   "});"
                 ],
                 "type": "text/javascript"
