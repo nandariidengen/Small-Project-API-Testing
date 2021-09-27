@@ -1069,17 +1069,6 @@
                 ],
                 "type": "text/javascript"
               }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "1f65db0f-a00b-46f3-9d1a-c62fca715b53",
-                "exec": [
-                  "pm.environment.set(\"name\", \"Nandari\");\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
             }
           ],
           "id": "f446bd38-c961-44f2-aa58-a0d259a3684f",
@@ -1097,7 +1086,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": " {\r\n            \"id\": \"{{newEmployeeId}}\",\r\n            \"name\": \"{{name}}\",\r\n            \"relationship\": \"Child\",\r\n            \"dob\": \"1995-11-03\",\r\n            \"sequenceNumber\": \"{{sequenceNumber}}\"\r\n        }",
+              "raw": " {\r\n            \"id\": \"{{newEmployeeId}}\",\r\n            \"name\": \"Nandari\",\r\n            \"relationship\": \"Child\",\r\n            \"dob\": \"1995-11-03\",\r\n            \"sequenceNumber\": \"{{sequenceNumber}}\"\r\n        }",
               "options": {
                 "raw": {
                   "language": "json"
