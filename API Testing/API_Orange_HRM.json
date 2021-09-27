@@ -729,8 +729,6 @@
               "script": {
                 "id": "11fa6355-e78c-46a4-babe-17af3f32f62d",
                 "exec": [
-                  "// pm.environment.set(\"firstName\", \"Airy\");\r",
-                  "// pm.environment.set(\"middleName\", \"Room\");\r",
                   "pm.environment.set(\"randomFirstName\", pm.variables.replaceIn('{{$randomFirstName}}'));\r",
                   "pm.environment.set(\"randomMiddleName\", pm.variables.replaceIn('{{$randomFirstName}}'));\r",
                   "\r",
