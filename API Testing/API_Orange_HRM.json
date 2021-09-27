@@ -1364,6 +1364,7 @@
                   "    pm.expect(jsonData.data.code).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.code).to.eql(pm.variables.get(\"randomNumber\").toString());\r",
                   "    pm.expect(jsonData.data.fullName).to.be.a(\"string\");\r",
+                  "    pm.expect(jsonData.data.fullName).to.eql(pm.environment.get(\"employeeName\"));\r",
                   "    pm.expect(jsonData.data.addressStreet1).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.addressStreet2).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.city).to.be.a(\"string\");\r",
