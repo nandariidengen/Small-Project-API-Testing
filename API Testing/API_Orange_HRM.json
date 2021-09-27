@@ -1372,6 +1372,7 @@
                   "    pm.expect(jsonData.data.city).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.city).to.eql(\"Makassar\");\r",
                   "    pm.expect(jsonData.data.state).to.be.a(\"string\");\r",
+                  "    pm.expect(jsonData.data.state).to.eql(\"ID\");\r",
                   "    pm.expect(jsonData.data.zip).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.county).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.homeTelephone).to.be.a(\"string\");\r",
