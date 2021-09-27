@@ -1472,8 +1472,7 @@
                 "exec": [
                   "pm.environment.set(\"addressStreet1\", \"Jl. Rusa\");\r",
                   "pm.environment.set(\"addressStreet2\", \"NTI\");\r",
-                  "// pm.environment.set(\"city\", \"Mks\");\r",
-                  "pm.environment.set(\"randomCity\", pm.variables.replaceIn('{{$randomCity}}'));\r",
+                  "pm.environment.set(\"city\", \"Mks\");\r",
                   "pm.environment.set(\"state\", \"IDN\");\r",
                   "pm.environment.set(\"zip\", \"75113\");\r",
                   "pm.environment.set(\"country\", \"INDONESIA\");\r",
