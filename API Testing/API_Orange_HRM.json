@@ -1368,6 +1368,7 @@
                   "    pm.expect(jsonData.data.addressStreet1).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.addressStreet1).to.eql(\"Jl. Elanng\");\r",
                   "    pm.expect(jsonData.data.addressStreet2).to.be.a(\"string\");\r",
+                  "    pm.expect(jsonData.data.addressStreet2).to.eql(\"BTP\");\r",
                   "    pm.expect(jsonData.data.city).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.state).to.be.a(\"string\");\r",
                   "    pm.expect(jsonData.data.zip).to.be.a(\"string\");\r",
