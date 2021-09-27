@@ -1471,7 +1471,7 @@
                 "id": "97ce36f5-2d2a-4916-996d-4c5ae769f5b2",
                 "exec": [
                   "pm.environment.set(\"addressStreet1\", pm.variables.replaceIn('{{$randomStreetName}}'));\r",
-                  "pm.environment.set(\"addressStreet2\", \"NTI\");\r",
+                  "pm.environment.set(\"addressStreet2\", pm.variables.replaceIn('{{$randomStreetAddress}}'));\r",
                   "pm.environment.set(\"randomCity\", pm.variables.replaceIn('{{$randomCity}}'));\r",
                   "pm.environment.set(\"state\", \"IDN\");\r",
                   "pm.environment.set(\"zip\", \"75113\");\r",
