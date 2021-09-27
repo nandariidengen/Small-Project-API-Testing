@@ -1501,7 +1501,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n        \"id\": \"{{newEmployeeId}}\",\r\n        \"addressStreet1\": \"{{addressStreet1}}\",\r\n        \"addressStreet2\": \"{{addressStreet2}}\",\r\n        \"city\": \"{{city}}\", \r\n        \"state\": \"{{state}}\",\r\n        \"zip\": \"{{zip}}\",\r\n        \"country\": \"{{country}}\",\r\n        \"homeTelephone\": \"{{homeTelephone}}\",\r\n        \"workTelephone\": \"{{workTelephone}}\",\r\n        \"mobile\": \"{{mobile}}\",\r\n        \"workEmail\": \"{{workEmail}}\",\r\n        \"otherEmail\": \"{{otherEmail}}\"\r\n    }",
+              "raw": "{\r\n        \"id\": \"{{newEmployeeId}}\",\r\n        \"addressStreet1\": \"{{addressStreet1}}\",\r\n        \"addressStreet2\": \"{{addressStreet2}}\",\r\n        \"city\": \"{{randomCity}}\", \r\n        \"state\": \"{{state}}\",\r\n        \"zip\": \"{{zip}}\",\r\n        \"country\": \"{{country}}\",\r\n        \"homeTelephone\": \"{{homeTelephone}}\",\r\n        \"workTelephone\": \"{{workTelephone}}\",\r\n        \"mobile\": \"{{mobile}}\",\r\n        \"workEmail\": \"{{workEmail}}\",\r\n        \"otherEmail\": \"{{otherEmail}}\"\r\n    }",
               "options": {
                 "raw": {
                   "language": "json"
