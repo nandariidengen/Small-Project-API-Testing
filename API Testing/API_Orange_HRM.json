@@ -913,6 +913,7 @@
                   "    pm.expect(jsonData.data[0].code).to.eql(pm.variables.get(\"randomNumber\").toString());\r",
                   "    pm.expect(jsonData.data[0].employeeId).to.eql(pm.environment.get(\"newEmployeeId\"));\r",
                   "    pm.expect(jsonData.data[0].fullName).to.eql(pm.environment.get(\"employeeName\"));\r",
+                  "    pm.expect(jsonData.data[0].status).to.be.null;\r",
                   "    pm.expect(jsonData.data[0].dob).to.eql(pm.environment.get(\"dob\"));\r",
                   "});\r",
                   "\r",
