@@ -1047,73 +1047,6 @@
           "response": []
         },
         {
-          "name": "Employee Dependents Copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "49beb180-70da-4c4f-a0ef-48fde5763ff9",
-                "exec": [
-                  "pm.test(\"Status code is 200\", function () {\r",
-                  "    pm.response.to.have.status(200);\r",
-                  "});\r",
-                  "pm.test(\"Verify result data Employee Dependent\", function () {\r",
-                  "    var jsonData = pm.response.json();\r",
-                  "    pm.expect(jsonData.data[0].name).to.be.a(\"string\");\r",
-                  "    pm.expect(jsonData.data[0].relationship).to.eql(\"Child\");\r",
-                  "    pm.expect(jsonData.data[0].dob).to.be.a(\"string\");\r",
-                  "    pm.expect(jsonData.data[0].sequenceNumber).to.be.a(\"string\");\r",
-                  "});\r",
-                  "\r",
-                  "pm.test(\"Response time is less than 1000ms\", function () {\r",
-                  "    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
-                  "});"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "6815c72d-54a7-401c-adcd-51fda355978e",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "Bearer {{Token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": []
-            },
-            "url": {
-              "raw": "{{baseUrl}}/api/v1/employee/:id/dependent",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "employee",
-                ":id",
-                "dependent"
-              ],
-              "variable": [
-                {
-                  "id": "365e8015-c0c8-442b-8c5c-6eb5b31f9dc2",
-                  "key": "id",
-                  "value": "{{newEmployeeId}}"
-                }
-              ]
-            }
-          },
-          "response": []
-        },
-        {
           "name": "Update Employee Dependents",
           "event": [
             {
@@ -1174,6 +1107,73 @@
               ],
               "variable": [
                 {
+                  "key": "id",
+                  "value": "{{newEmployeeId}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Employee Dependents Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "49beb180-70da-4c4f-a0ef-48fde5763ff9",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "pm.test(\"Verify result data Employee Dependent\", function () {\r",
+                  "    var jsonData = pm.response.json();\r",
+                  "    pm.expect(jsonData.data[0].name).to.be.a(\"string\");\r",
+                  "    pm.expect(jsonData.data[0].relationship).to.eql(\"Child\");\r",
+                  "    pm.expect(jsonData.data[0].dob).to.be.a(\"string\");\r",
+                  "    pm.expect(jsonData.data[0].sequenceNumber).to.be.a(\"string\");\r",
+                  "});\r",
+                  "\r",
+                  "pm.test(\"Response time is less than 1000ms\", function () {\r",
+                  "    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+                  "});"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "6815c72d-54a7-401c-adcd-51fda355978e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{Token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": []
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/employee/:id/dependent",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "employee",
+                ":id",
+                "dependent"
+              ],
+              "variable": [
+                {
+                  "id": "365e8015-c0c8-442b-8c5c-6eb5b31f9dc2",
                   "key": "id",
                   "value": "{{newEmployeeId}}"
                 }
