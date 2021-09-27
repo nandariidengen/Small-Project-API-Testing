@@ -1477,9 +1477,9 @@
                   "pm.environment.set(\"zip\", \"75113\");\r",
                   "pm.environment.set(\"country\", \"INDONESIA\");\r",
                   "pm.environment.set(\"homeTelephone\", \"042323069\");\r",
-                  "pm.environment.set(\"workTelephone\", pm.variables.replaceIn('{{$randomPhone}}'));\r",
+                  "pm.environment.set(\"workTelephone\", pm.variables.replaceIn('{{$randomPhoneNumberExt}}'));\r",
                   "pm.environment.set(\"mobile\", \"08283934341\");\r",
-                  "pm.environment.set(\"workEmail\", \"indomie@gmail.com\");\r",
+                  "pm.environment.set(\"workEmail\", pm.variables.replaceIn('{{$randomEmail}}'));\r",
                   "pm.environment.set(\"otherEmail\", \"miesedap@gmail.com\");"
                 ],
                 "type": "text/javascript"
